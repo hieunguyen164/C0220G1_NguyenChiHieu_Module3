@@ -26,7 +26,11 @@ export class CalculatorComponent implements OnInit {
         this.result = this.firstNum * this.secondNum;
         break;
       case '/':
-        this.result = this.firstNum / this.secondNum;
+        if (this.secondNum === 0){
+          document.getElementById('result').innerHTML = 'Second num can not be 0!';
+        }else{
+          this.result = this.firstNum / this.secondNum;
+        }
         break;
     }
   }

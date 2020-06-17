@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Audio Player</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/vpplayer.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/vpplayer.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+  $(document).ready(function(){
+    $.ajax({
+      type: 'GET',
+      url: 'mp3.xml',
+      dataType: 'xml',
+      success: function (xml) {
+        let mp3 = $(xml).find('location').text();
+        let name = $(xml).find('title').text();
+        $("#player").vpplayer({
+          src: mp3,
+          trackName: name
+        })
+      }
+    })
+  });
+</script>
+<body>
+<div id="jquery-script-menu">
+    <div class="jquery-script-center"></div>
+</div>
+<h1>Audio Player</h1>
+    <div id="player" class="demo"></div>
+<div id="test"></div>
+</body>
+</html>
