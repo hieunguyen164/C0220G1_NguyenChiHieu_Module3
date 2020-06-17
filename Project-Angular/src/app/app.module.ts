@@ -7,13 +7,13 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import {FormsModule} from '@angular/forms';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
 import { NameCardComponent } from './name-card/name-card.component';
-import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProgressBarConfigComponent } from './progress-bar-config/progress-bar-config.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { ProgressBarDynamicComponent } from './progress-bar-dynamic/progress-bar-dynamic.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +23,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     CalculatorComponent,
     ColorPickerComponent,
     NameCardComponent,
-    ProgressBarComponent,
-    ProgressBarConfigComponent
+    ProgressBarConfigComponent,
+    ProgressBarDynamicComponent
   ],
   imports: [
     BrowserModule,
