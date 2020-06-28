@@ -15,3 +15,4 @@ export class NameCardComponent implements OnInit {
   }
 
 }
+

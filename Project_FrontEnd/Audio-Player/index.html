@@ -15,23 +15,6 @@
     <link rel="stylesheet" type="text/css" href="./css/vpplayer.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<script>
-  $(document).ready(function(){
-    $.ajax({
-      type: 'GET',
-      url: 'mp3.xml',
-      dataType: 'xml',
-      success: function (xml) {
-        let mp3 = $(xml).find('location').text();
-        let name = $(xml).find('title').text();
-        $("#player").vpplayer({
-          src: mp3,
-          trackName: name
-        })
-      }
-    })
-  });
-</script>
 <body>
 <div id="jquery-script-menu">
     <div class="jquery-script-center"></div>
@@ -39,5 +22,22 @@
 <h1>Audio Player</h1>
     <div id="player" class="demo"></div>
 <div id="test"></div>
+<script>
+    $(document).ready(function(){
+        $.ajax({
+            type: 'GET',
+            url: 'mp3.xml',
+            dataType: 'xml',
+            success: function (xml) {
+                let mp3 = $(xml).find('location').text();
+                let name = $(xml).find('title').text();
+                $("#player").vpplayer({
+                    src: mp3,
+                    trackName: name
+                })
+            }
+        })
+    });
+</script>
 </body>
 </html>

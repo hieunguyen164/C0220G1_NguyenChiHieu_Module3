@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class CalculatorComponent implements OnInit {
   firstNum: number;
   secondNum: number;
-  result: number;
+  result: any;
   operator = '+';
   changeOperator(value){
     this.operator = value;
@@ -27,7 +27,7 @@ export class CalculatorComponent implements OnInit {
         break;
       case '/':
         if (this.secondNum === 0){
-          document.getElementById('result').innerHTML = 'Second num can not be 0!';
+          this.result = 'Khong the chia cho 0!';
         }else{
           this.result = this.firstNum / this.secondNum;
         }

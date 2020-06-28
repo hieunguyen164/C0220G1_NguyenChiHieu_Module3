@@ -1,8 +1,27 @@
-<app-font-size-editor></app-font-size-editor>
-<app-pet></app-pet>
-<br>
-<app-calculator></app-calculator>
-<app-color-picker><</app-color-picker>
-<app-name-card cardName="Professional Dev" email="prodev@abc.xyz" phone="0123456789"></app-name-card>
-<app-progress-bar-dynamic></app-progress-bar-dynamic>
-<app-progress-bar-config></app-progress-bar-config>
+<div class="container">
+  <div class="row row-custom">
+    <div class="col-md-2">
+      <ul class=" list-group">
+        <li class="list-group-item"><a routerLink="/calculator">Calculator</a></li>
+        <li class="list-group-item"><a routerLink="/color-picker">Color Picker</a></li>
+        <li class="list-group-item"><a routerLink="/font-size-editor">Font Size Editor</a></li>
+        <li class="list-group-item"><a routerLink="/name-card-parent">Name Card</a></li>
+        <li class="list-group-item"><a routerLink="/pet">Pet Profile</a></li>
+        <li class="list-group-item"><a routerLink="/progress-bar-parent">Progress Bar</a></li>
+        <li class="list-group-item"><a routerLink="/countdown-timer-parent">Countdown Timer</a></li>
+        <li class="list-group-item"><a routerLink="/parent">Vote to Parent</a></li>
+        <li class="list-group-item"><a routerLink="/todo">Todo Form</a></li>
+        <li class="list-group-item"><a routerLink="/register-form">Register Form</a></li>
+        <li class="list-group-item"><a routerLink="/login-form">Login Form</a></li>
+        <li class="list-group-item"><a routerLink="/timelines">Timelines</a></li>
+        <li class="list-group-item"><a routerLink="/youtube">Youtube</a></li>
+        <li class="list-group-item"><a routerLink="/dictionary">Dictionary</a></li>
+        <li class="list-group-item"><a routerLink="/image-gallery">Image Gallery</a></li>
+        <li class="list-group-item"><a routerLink="/blog">Blog</a></li>
+      </ul>
+    </div>
+    <div class="col-md-10 content">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

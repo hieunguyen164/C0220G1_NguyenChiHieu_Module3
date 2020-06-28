@@ -1,0 +1,13 @@
+<form (ngSubmit)="getDataFromForm()" [formGroup]="registerForm">
+  <input type="text" formControlName="fullName"><br>
+  <p [ngClass]="'error'" *ngIf="registerForm.get('fullName').hasError('required')
+&& registerForm.get('fullName').touched">
+    Name must not empty!</p>
+  <p [ngClass]="'error'" *ngIf="registerForm.get('fullName').hasError('pattern')
+&& registerForm.get('fullName').touched">
+    Invalid Name!</p>
+  <input type="number" formControlName="age"><br>
+  <p [ngClass]="'error'" *ngIf="registerForm.hasError('invalidAge','age')
+&& registerForm.get('age').touched">Age must > 18!</p>
+  <button>Register</button>
+</form>
